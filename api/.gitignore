@@ -1,0 +1,13 @@
+# Ignore environment variables
+.env
+
+# Ignore compiled Go binaries
+/bin/
+*.exe
+*.out
+
+# Ignore Go module cache
+/go/pkg/mod/
+
+# Ignore Docker build files
+docker-compose.override.yml
