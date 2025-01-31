@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { API_URL } from "../config"; // Import API URL from config
 
 interface Article {
   title: string;
@@ -16,7 +17,7 @@ function News() {
 
     const fetchNews = async () => {
       try {
-        const response = await fetch("http://localhost:8080/news"); // TODO: Put this string in an environment variable
+        const response = await fetch(`${API_URL}/news`); // Fetch from environment variable
         if (!response.ok) {
           throw new Error("Failed to fetch news");
         }
