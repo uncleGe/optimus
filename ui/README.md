@@ -1,50 +1,87 @@
-# React + TypeScript + Vite
+# Optimus UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Optimus is a curated news aggregator designed to keep Optimum decision-makers informed about the telecom industry. This frontend is built with React and TypeScript, styled for a clean and modern experience, and hosted on GCP.
 
-Currently, two official plugins are available:
+![Optimus UI Screenshot](public/optimus-ui-main.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Fetches and displays curated telecom industry news
+- Optimized styling for readability and branding
+- Responsive design for various screen sizes
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **React** (with Vite for fast development)
+- **TypeScript** for type safety
+- **CSS** for styling
+- **ESLint & Prettier** for code consistency
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (Latest LTS recommended)
+- [Yarn](https://yarnpkg.com/) or npm
+
+### Installation
+
+Clone the repository and navigate to the frontend directory:
+
+```sh
+cd optimus/ui
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+yarn install
+# or
+npm install
 ```
+
+## Customization
+
+### Changing the Favicon
+
+Replace `public/favicon.ico` with your desired favicon file.
+
+### Modifying Styles
+
+All styles are defined in `src/App.css` and component-specific stylesheets.
+
+### Environment Variables
+
+Create a `.env` file in the root of the UI directory with the following:
+
+```sh
+VITE_API_URL=http://localhost:8080
+```
+
+### Running the Application
+
+To start the development server:
+
+```sh
+yarn dev
+# or
+npm run dev
+```
+
+This will start the UI at `http://localhost:5173`.
+
+### Building for Production
+
+```sh
+yarn build
+# or
+npm run build
+```
+
+This will generate a production-ready build in the `dist` directory.
+
+## Deployment
+
+Deployment is managed via GCP. Ensure that environment variables are correctly configured in the hosting environment.

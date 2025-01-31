@@ -16,16 +16,12 @@ The backend for Optimus is a Go-based API that aggregates telecom industry news.
 - Go (>= 1.19)
 - Docker
 - A NewsAPI key (https://newsapi.org/)
-- (Optional) GCP account for deployment
+- GCP account for deployment
 
 ### Local Development
 
-1. **Clone the repository**
-
-   ```sh
-   git clone https://github.com/yourusername/optimus.git
-   cd optimus/backend
-   ```
+1. **Get your API Key**
+   Go to https://newsapi.org/
 
 2. **Set up environment variables**
    Create a `.env` file:
@@ -44,9 +40,28 @@ The backend for Optimus is a Go-based API that aggregates telecom industry news.
 
    ```sh
    docker build -t optimus-backend .
-   docker run -d -p 8080:8080 --env-file .env optimus-backend
+   docker run -p 8080:8080 --env-file .env optimus-backend
    ```
 
 5. **API Endpoints**
    - `GET /` → Health check
    - `GET /news` → Fetch latest telecom news
+
+## API Documentation
+
+GET /news
+Returns curated telecom industry news articles.
+
+Response:
+
+```json
+{
+  "articles": [
+    {
+      "title": "string",
+      "description": "string",
+      "url": "string"
+    }
+  ]
+}
+```
