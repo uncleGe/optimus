@@ -12,10 +12,24 @@ import (
 func StartServer() {
 	r := gin.Default()
 
+	// Enable CORS middleware
+	r.Use(func(c *gin.Context) {
+		c.Header("Access-Control-Allow-Origin", "*") // Allow all origins
+		c.Header("Access-Control-Allow-Methods", "GET, OPTIONS")
+		c.Header("Access-Control-Allow-Headers", "Content-Type")
+		if c.Request.Method == "OPTIONS" {
+			c.AbortWithStatus(http.StatusNoContent)
+			return
+		}
+		c.Next()
+	})
+
+	// Root route
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"message": "Welcome to Optimus!"})
 	})
 
+	// News route
 	r.GET("/news", func(c *gin.Context) {
 		apiKey, err := newsapi.LoadAPIKey()
 		if err != nil {
