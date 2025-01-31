@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222; /* Dark grey like the logo */
+  display: inline-block;
+}
+
+.dot {
+  color: #f66508; /* Optimum's orange */
+  font-size: 2.5rem;
+}
