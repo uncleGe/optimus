@@ -13,6 +13,7 @@ func StartServer() {
 	r := gin.Default()
 
 	// Enable CORS middleware
+	// TODO: Fix the CORS configuration to be more specific rather than allowing all origins
 	r.Use(func(c *gin.Context) {
 		c.Header("Access-Control-Allow-Origin", "*") // Allow all origins
 		c.Header("Access-Control-Allow-Methods", "GET, OPTIONS")
