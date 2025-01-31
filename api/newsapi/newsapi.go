@@ -36,7 +36,7 @@ func LoadAPIKey() (string, error) {
 }
 
 func BuildNewsQuery(apiKey string) string {
-	fromDate := time.Now().Add(-24 * time.Hour).Format("2006-01-02")
+	fromDate := time.Now().Add(-72 * time.Hour).Format("2006-01-02")
 
 	return fmt.Sprintf(
 		"https://newsapi.org/v2/everything?q=%s&from=%s&apiKey=%s",
