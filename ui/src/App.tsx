@@ -7,9 +7,11 @@ function App() {
       <h1 className="logo">
         optimus<span className="dot">.</span>
       </h1>
-      <p>
+      <p className="tagline">
         Optimus curates telecom industry news to keep Optimum decision-makers optimally informed.
-        Built with Go and React/TypeScript, hosted on GCP.
+      </p>
+      <p className="subtagline">
+        (Built with React/TypeScript and Go, hosted on GCP.)
       </p>
       <News />
     </div>

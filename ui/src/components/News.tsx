@@ -37,7 +37,7 @@ function News() {
     <div>
       <h2>Latest News</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <ul>
+      <ul className="news-list">
         {articles.map((article, index) => (
           <li key={index}>
             <h3>{article.title}</h3>

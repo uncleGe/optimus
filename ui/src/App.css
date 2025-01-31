@@ -1,17 +1,97 @@
-.container {
-  text-align: center;
+/* Ensure full-page background color */
+html, body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text */
+  min-height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center the title */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Orange period for Optimus */
+h1 span {
+  color: #ff6200;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-.logo {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #222; /* Dark grey like the logo */
-  display: inline-block;
+.tagline {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #dcdcdc;
+  max-width: 700px;
+  margin: 15px auto 10px;
+  line-height: 1.6;
 }
 
-.dot {
-  color: #f66508; /* Optimum's orange */
-  font-size: 2.5rem;
+.subtagline {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* News styling */
+.news-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.news-list li {
+  background: #1a1a1a;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #ff6200;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.news-list li h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.news-list li p {
+  margin: 5px 0;
+  color: #bbbbbb;
+}
+
+.news-list li a {
+  text-decoration: none;
+  color: #ff6200;
+  font-weight: bold;
+}
+
+.news-list li a:hover {
+  text-decoration: underline;
+}
+
+/* Ensures content is centered */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
 }
