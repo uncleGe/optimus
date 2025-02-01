@@ -82,6 +82,6 @@ npm run build
 
 This will generate a production-ready build in the `dist` directory.
 
-## Deployment
+## Frontend Hosting & Deployment
 
-Deployment is managed via GCP. Ensure that environment variables are correctly configured in the hosting environment.
+The frontend is hosted on **Google Cloud Platform** with **Google Cloud Storage** and **Cloud CDN** enabled. After building, the static files are uploaded to a Cloud Storage bucket, which serves the frontend globally through a publicly accessible URL.

@@ -51,3 +51,11 @@ Ensure you have the following installed:
    ```
    http://localhost:5173
    ```
+
+### Hosting
+
+The app is hosted on **Google Cloud Platform** using **Google Cloud Run** and **Google Cloud Storage**.
+
+##
+
+See the READMEs in the UI API projects for more detail.

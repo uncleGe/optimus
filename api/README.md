@@ -20,10 +20,10 @@ The backend for Optimus is a Go-based API that aggregates telecom industry news.
 
 ### Local Development
 
-1. **Get your API Key**
+1. **Get your API Key**  
    Go to https://newsapi.org/
 
-2. **Set up environment variables**
+2. **Set up environment variables**  
    Create a `.env` file:
 
    ```sh
@@ -49,10 +49,11 @@ The backend for Optimus is a Go-based API that aggregates telecom industry news.
 
 ## API Documentation
 
-GET /news
+### GET /news
+
 Returns curated telecom industry news articles.
 
-Response:
+#### Response:
 
 ```json
 {
@@ -65,3 +66,7 @@ Response:
   ]
 }
 ```
+
+## Backend Hosting & Deployment
+
+The backend API is hosted on **Google Cloud Platform** using **Google Cloud Run**, a fully managed serverless platform. The API is containerized using **Docker** and pushed to **Google Artifact Registry** before being deployed to Cloud Run. After deployment, Cloud Run provides a publicly accessible URL for the API, which can be used by the frontend or other services.
